@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+body {
+  font-family: 'Lato';
+  color: #222;
+  background:#fff;
+}
+
+.contacto {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.contacto__titulo {
+  font-size: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.contacto {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.card__icon {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 64px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity .3s ease-out;
+}
+
+.card__label {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 600;
+  letter-spacing: .5px;
+  color: #444;
+  font-size: 1.5rem;
+}
+
+
+.cards {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+
+.card {
+  width: auto;
+  height: auto;
+  position: relative;
+  min-width: 200px;
+  min-height: 350px;
+  overflow: visible;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  box-shadow: none;
+  border: none;
+}
+
+
+.card__shape {
+  position: relative;
+  display: block;
+  margin-bottom: 0;
+  transition: transform .4s ease-out;
+  transform: translateY(40%);
+  width: 200px;
+  height: auto;
+}
+
+
+
+.card__icon {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 42px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity .3s ease-out;
+}
+
+.card__label {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 600;
+  letter-spacing: .5px;
+  color: #444;
+}
+
+
+.card:hover .card__shape,
+.card.active .card__shape {
+  transform: translateY(0);
+}
+
+.card:hover .card__icon,
+.card.active .card__icon {
+  opacity: 1;
+}
+
+.cards > .card:not(:first-child) {
+  margin-left: -30px;
+  z-index: 1;
+}
